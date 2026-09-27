@@ -1,5 +1,7 @@
 # fx.base
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 Requires Norm 0.24. Module identity and dependencies: [module.norm](fx/base/module.norm).
 
 Build: `norm package fx/base --output build/repository`.
