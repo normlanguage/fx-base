@@ -7,3 +7,5 @@ Requires Norm 0.24. Module identity and dependencies: [module.norm](fx/base/modu
 Build: `norm package fx/base --output build/repository`.
 
 Validated on Windows x64 with JVM execution. JavaFX artifacts are resolved from Maven Central; Norm packages are distributed through GitHub Releases.
+
+[Sample ownership](samples/README.md).

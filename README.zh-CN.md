@@ -7,3 +7,5 @@
 构建：`norm package fx/base --output build/repository`。
 
 已在 Windows x64 的 JVM 执行环境验证。JavaFX 制品从 Maven Central 解析；Norm 包通过 GitHub Releases 分发。
+
+[示例归属](samples/README.zh-CN.md)。
