@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-需要 Norm 0.24。模块身份和依赖见 [module.norm](fx/base/module.norm)。
+模块身份和依赖见 [module.norm](fx/base/module.norm)。
 
 构建：`norm package fx/base --output build/repository`。
 
@@ -10,4 +10,4 @@
 
 [示例归属](samples/README.zh-CN.md)。
 
-[Package toolchain](.github/workflows/package.yml) · [Observable collection integration test](fx/base/tests/test/collections/case.norm).
+[打包工具链](.github/workflows/package.yml) · [可观察集合集成测试](fx/base/tests/test/collections/case.norm)。
