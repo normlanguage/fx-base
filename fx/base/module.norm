@@ -1,12 +1,12 @@
 Module module() {
-  module(name: "fx.base", version: 1, binding: jarBinding(target: mavenJar(group: "org.openjfx", artifact: "javafx-base", version: "25.0.2", resolution: sha256("073f62490a5babbed42c20e40bb89646465e7ca4e9b1bee443f12b46f63f0108")),
+  module(name: "fx.base", version: 2, exports: ["Event", "ObservableList", "FXCollections", "StringProperty", "BooleanProperty", "ObservableValue", "Observable"], dependencies: [dependency(repository: "norm", name: "java.base", version: 1)], binding: jarBinding(target: mavenJar(group: "org.openjfx", artifact: "javafx-base", version: "25.0.2", resolution: sha256("073f62490a5babbed42c20e40bb89646465e7ca4e9b1bee443f12b46f63f0108")),
     api: [
-      jarType(name: "Event", members: ["consume"]),
-      jarType(name: "ObservableList", members: ["size", "get", "add", "remove", "set", "contains"]),
-      jarType(name: "FXCollections", members: [], overloads: [jarOverload(name: "sort", parameterTypes: ["javafx.collections.ObservableList", "java.util.Comparator"])]),
-      jarType(name: "StringProperty", members: []),
-      jarType(name: "BooleanProperty", members: []),
-      jarType(name: "ObservableValue", members: ["getValue"]),
-      jarType(name: "Observable", members: ["addListener", "removeListener"])
+      jarType(name: "javafx.event.Event", members: ["consume"]),
+      jarType(name: "javafx.collections.ObservableList", members: []),
+      jarType(name: "javafx.collections.FXCollections", members: [], overloads: [jarOverload(name: "observableArrayList", parameterTypes: []), jarOverload(name: "sort", parameterTypes: ["javafx.collections.ObservableList", "java.util.Comparator"])]),
+      jarType(name: "javafx.beans.property.StringProperty", members: []),
+      jarType(name: "javafx.beans.property.BooleanProperty", members: []),
+      jarType(name: "javafx.beans.value.ObservableValue", members: ["getValue"]),
+      jarType(name: "javafx.beans.Observable", members: ["addListener", "removeListener"])
     ]))
 }
