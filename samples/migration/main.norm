@@ -1,0 +1,19 @@
+package migration
+import javafx.fxCollectionsObservableArrayList
+import javafx.fxCollectionsSort
+import java.base.util.JavaList
+Void main() {
+  var values = fxCollectionsObservableArrayList<String>()!!
+  values.add(arg0: "beta")
+  values.add(arg0: "alpha")
+  JavaList<String> list = values
+  list.set(arg0: 0, arg1: "gamma")
+  require(condition: list.contains(arg0: "gamma"), message: "canonical collection preserves replacement")
+  fxCollectionsSort<String>(arg0: values, arg1: (String? left, String? right) {
+    if left == right { return 0 }
+    if left == "alpha" { return -1 }
+    return 1
+  })
+  require(condition: list.get(arg0: 0) == "alpha", message: "canonical collection sorts actual values")
+  printLine("javafx collection migration passed")
+}
